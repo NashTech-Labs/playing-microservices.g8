@@ -18,7 +18,6 @@ val scoverageSettings = Seq(
 
 lazy val root = (
   project.in(file("."))
-  enablePlugins(PlayScala)
   aggregate(common, persistence, api, web, order, customer, payment)
 )
 
@@ -31,37 +30,41 @@ lazy val common = (
 lazy val persistence = (
   PlayProject("persistence")
   settings(libraryDependencies ++= persistenceDependencies)
+  settings(routesGenerator := InjectedRoutesGenerator)
   settings(scoverageSettings: _*)
 ) dependsOn(common)
 
 lazy val customer = (
   PlayProject("customer-service")
   settings(libraryDependencies ++= playDependencies)
+  settings(routesGenerator := InjectedRoutesGenerator)
   settings(scoverageSettings: _*)
 ) dependsOn(common)
 
 lazy val order = (
   PlayProject("order-service")
   settings(libraryDependencies ++= playDependencies)
+  settings(routesGenerator := InjectedRoutesGenerator)
   settings(scoverageSettings: _*)
 ) dependsOn(common)
 
 lazy val payment = (
   PlayProject("payment-service")
   settings(libraryDependencies ++= playDependencies)
+  settings(routesGenerator := InjectedRoutesGenerator)
   settings(scoverageSettings: _*)
 ) dependsOn(common)
 
 lazy val api = (
   PlayProject("api")
   settings(libraryDependencies ++= playDependencies)
+  settings(routesGenerator := InjectedRoutesGenerator)
   settings(scoverageSettings: _*)
 ) dependsOn(common)
 
 lazy val web = (
   PlayProject("web")
   settings(libraryDependencies ++= webDependencies)
+  settings(routesGenerator := InjectedRoutesGenerator)
   settings(scoverageSettings: _*)
 ) dependsOn(common)
-
-routesGenerator := InjectedRoutesGenerator

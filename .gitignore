@@ -19,27 +19,41 @@ server.pid
 api/.classpath
 api/.project
 api/.settings
+api/target/
+api/logs/
 
 common/.classpath
 common/.project
 common/.settings
+common/target/
 
 customer-service/.classpath
 customer-service/.project
 customer-service/.settings
+customer-service/target/
+customer-service/logs/
 
 order-service/.classpath
 order-service/.project
 order-service/.settings
+order-service/target/
+order-service/logs/
 
 payment-service/.classpath
 payment-service/.project
 payment-service/.settings
+payment-service/target/
+payment-service/logs/
 
 persistence/.classpath
 persistence/.project
 persistence/.settings
+persistence/target/
+persistence/logs/
 
 web/.classpath
 web/.project
 web/.settings
+web/target/
+web/logs/
+
