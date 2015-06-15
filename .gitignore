@@ -27,23 +27,29 @@ common/.project
 common/.settings
 common/target/
 
-customer-service/.classpath
-customer-service/.project
-customer-service/.settings
-customer-service/target/
-customer-service/logs/
+service-a/.classpath
+service-a/.project
+service-a/.settings
+service-a/target/
+service-a/logs/
 
-order-service/.classpath
-order-service/.project
-order-service/.settings
-order-service/target/
-order-service/logs/
+service-b/.classpath
+service-b/.project
+service-b/.settings
+service-b/target/
+service-b/logs/
 
-payment-service/.classpath
-payment-service/.project
-payment-service/.settings
-payment-service/target/
-payment-service/logs/
+service-c/.classpath
+service-c/.project
+service-c/.settings
+service-c/target/
+service-c/logs/
+
+service-d/.classpath
+service-d/.project
+service-d/.settings
+service-d/target/
+service-d/logs/
 
 persistence/.classpath
 persistence/.project

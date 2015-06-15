@@ -34,22 +34,22 @@ lazy val persistence = (
   settings(scoverageSettings: _*)
 ) dependsOn(common)
 
-lazy val customer = (
-  PlayProject("customer-service")
+lazy val serviceA = (
+  PlayProject("service-a")
   settings(libraryDependencies ++= playDependencies)
   settings(routesGenerator := InjectedRoutesGenerator)
   settings(scoverageSettings: _*)
 ) dependsOn(common)
 
-lazy val order = (
-  PlayProject("order-service")
+lazy val serviceB = (
+  PlayProject("service-b")
   settings(libraryDependencies ++= playDependencies)
   settings(routesGenerator := InjectedRoutesGenerator)
   settings(scoverageSettings: _*)
 ) dependsOn(common)
 
-lazy val payment = (
-  PlayProject("payment-service")
+lazy val serviceC = (
+  PlayProject("service-c")
   settings(libraryDependencies ++= playDependencies)
   settings(routesGenerator := InjectedRoutesGenerator)
   settings(scoverageSettings: _*)
