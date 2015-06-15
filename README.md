@@ -32,9 +32,7 @@ By default, scoverage will generate reports for each project seperately. You can
 $ ./activator coverageAggregate
 ```
 
-### Deployment : dev environment
-
-##### microservices
+### Deployment : microservices
 ```
 $ ./activator "project <service-name>" "run <PORT>"
 ```
