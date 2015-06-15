@@ -1,7 +1,18 @@
-This is your new Play application
+[playing-microservices](http://blog.knoldus.com/2015/06/15/play-microservice-architecture/)
 =================================
 
-This file will be packaged with your application, when using `activator dist`.
+This repository describes a basic Microservice architecture design using Play 2.4.X and Scala. The big idea behind microservices is to architect large, complex and long-lived applications as a set of cohesive services that evolve over time. The term microservices strongly suggests that the services should be small.
+
+In short, the microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API.
+
+#### Single node microservice architecture
+
+[!alt tag](/web/public/images/microservices-arch.png)
+
+#### Multiple node microservice architecture with load balancer
+
+[!alt tag](/web/public/images/microservices-arch-with-elb.png)
+
 
 ### Scalastyle : Check the code quality
 
@@ -27,3 +38,10 @@ $ ./activator coverageAggregate
 ```
 $ ./activator "project <service-name>" "run <PORT>"
 ```
+
+-----------------------------------------------------------------------
+### References
+-----------------------------------------------------------------------
+* [Play Framework](http://www.playframework.com/)
+* [Microservices](http://martinfowler.com/articles/microservices.html)
+* [Microservices: Decomposing Applications](http://www.infoq.com/articles/microservices-intro)
