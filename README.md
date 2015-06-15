@@ -7,11 +7,11 @@ In short, the microservice architectural style is an approach to developing a si
 
 #### Single node microservice architecture
 
-[!alt tag](/web/public/images/microservices-arch.png)
+[! alt tag](/web/public/images/microservices-arch.png)
 
 #### Multiple node microservice architecture with load balancer
 
-[!alt tag](/web/public/images/microservices-arch-with-elb.png)
+[! alt tag](/web/public/images/microservices-arch-with-elb.png)
 
 
 ### Scalastyle : Check the code quality
