@@ -1,77 +1,12 @@
-import CommonSettings._
-import Dependencies._
-import play.twirl.sbt.Import.TwirlKeys._
-import ScoverageSbtPlugin.ScoverageKeys._
-
-name := """playing-microservices"""
-
-version := "1.0"
-
-scalaVersion := scala
-
-val scoverageSettings = Seq(
-  coverageExcludedPackages := "<empty>;controllers.javascript;views.*;router",
-  coverageExcludedFiles := "",
-  coverageMinimum := 80,
-  coverageFailOnMinimum := true
-)
-
-lazy val root = (
-  project.in(file("."))
-  aggregate(common, persistence, api, web, serviceA, serviceB, serviceC, serviceD)
-)
-
-lazy val common = (
-  BaseProject("common")
-  settings(libraryDependencies ++= playDependencies)
-  settings(scoverageSettings: _*)
-)
-
-lazy val persistence = (
-  PlayProject("persistence")
-  settings(libraryDependencies ++= persistenceDependencies)
-  settings(routesGenerator := InjectedRoutesGenerator)
-  settings(scoverageSettings: _*)
-) dependsOn(common)
-
-lazy val serviceA = (
-  PlayProject("service-a")
-  settings(libraryDependencies ++= playDependencies)
-  settings(routesGenerator := InjectedRoutesGenerator)
-  settings(scoverageSettings: _*)
-) dependsOn(common)
-
-lazy val serviceB = (
-  PlayProject("service-b")
-  settings(libraryDependencies ++= playDependencies)
-  settings(routesGenerator := InjectedRoutesGenerator)
-  settings(scoverageSettings: _*)
-) dependsOn(common)
-
-lazy val serviceC = (
-  PlayProject("service-c")
-  settings(libraryDependencies ++= playDependencies)
-  settings(routesGenerator := InjectedRoutesGenerator)
-  settings(scoverageSettings: _*)
-) dependsOn(common)
-
-lazy val serviceD = (
-  PlayProject("service-d")
-  settings(libraryDependencies ++= playDependencies)
-  settings(routesGenerator := InjectedRoutesGenerator)
-  settings(scoverageSettings: _*)
-) dependsOn(common)
-
-lazy val api = (
-  PlayProject("api")
-  settings(libraryDependencies ++= playDependencies)
-  settings(routesGenerator := InjectedRoutesGenerator)
-  settings(scoverageSettings: _*)
-) dependsOn(common)
-
-lazy val web = (
-  PlayProject("web")
-  settings(libraryDependencies ++= webDependencies)
-  settings(routesGenerator := InjectedRoutesGenerator)
-  settings(scoverageSettings: _*)
-) dependsOn(common)
+// This build is for this Giter8 template.
+// To test the template run `g8` or `g8Test` from the sbt session.
+// See http://www.foundweekends.org/giter8/testing.html#Using+the+Giter8Plugin for more details.
+lazy val root = (project in file(".")).
+  settings(
+    name := "playing-microservices",
+    test in Test := {
+      val _ = (g8Test in Test).toTask("").value
+    },
+    scriptedLaunchOpts ++= List("-Xms1024m", "-Xmx1024m", "-XX:ReservedCodeCacheSize=128m", "-XX:MaxPermSize=256m", "-Xss2m", "-Dfile.encoding=UTF-8"),
+    resolvers += Resolver.url("typesafe", url("http://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
+  )

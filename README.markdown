@@ -1,3 +1,7 @@
+A [Giter8][g8] template for describes Microservice architecture design using Play 2.4.x and Scala
+
+About
+-----
 [playing-microservices](http://blog.knoldus.com/2015/06/15/play-microservice-architecture/)
 =================================
 
@@ -43,3 +47,13 @@ $ ./activator "project <service-name>" "run <PORT>"
 * [Play Framework](http://www.playframework.com/)
 * [Microservices](http://martinfowler.com/articles/microservices.html)
 * [Microservices: Decomposing Applications](http://www.infoq.com/articles/microservices-intro)
+
+Template license
+----------------
+Written in 2015 by Knoldus Software LLP
+
+To the extent possible under law, the author(s) have dedicated all copyright and related
+and neighboring rights to this template to the public domain worldwide.
+This template is distributed without any warranty. See <http://creativecommons.org/publicdomain/zero/1.0/>.
+
+[g8]: http://www.foundweekends.org/giter8/
